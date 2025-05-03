@@ -121,7 +121,7 @@ The script iterated over every combination of username and password, attempting 
 
 The script displayed the result of each attempt: whether the login was successful or failed.
 
-
+''''
 ##### The script
 
 Code
@@ -276,7 +276,7 @@ def main():
         print("[-] No valid credentials found")
 
 
-
+''''
 ##### 4.2. Brute-Force Execution
 
 ###### python ssh-bruteforce.py 172.28.128.3
