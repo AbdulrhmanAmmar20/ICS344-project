@@ -1,6 +1,6 @@
 # ICS344-project
-## Group#1 
-### Hassan AlHulays | 202182710 | 33.33%
+## Group: 1 | Section: 01
+### Hassan Alhulays | 202182710 | 33.33%
 #### Completed Phase 1
 __________________________________________________
 ### Basil AlHarbi | 202177350 | 33.33%
