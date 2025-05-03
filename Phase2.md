@@ -192,19 +192,19 @@ index=cowrie_honeypot "Command found"
  
 ### Splunk Logs
 
-![splunk](https://github.com/user-attachments/assets/efd5fd78-cb14-4239-b78e-589ba57e4f25)
+![splunk](Phase2/1.png)
 
 ### Hydra Attempts
 
-![hydraWorking](https://github.com/user-attachments/assets/8c4544c7-cc71-40d5-bcc3-87405cd751d9)
+![hydraWorking](Phase2/2.png)
 
 ### Scri[t Attempts
 
-![scriptWorking](https://github.com/user-attachments/assets/14415403-90b6-4996-9651-6b390a24b291)
+![scriptWorking](Phase2/3.png)
 
 ### Numper of Failed Attempts
 
-![numberOfFailedUsers](https://github.com/user-attachments/assets/5896cf7f-2d67-4d74-85b3-be3f330aa949)
+![numberOfFailedUsers](Phase2/4.png)
 
 ### Vagrant Fail & Success Attempts using a splunk Query
 
@@ -217,6 +217,6 @@ index=metasploitable_auth sourcetype=linux_auth "vagrant"
 | stats count by login_status 
 | rename count as "Login Attempts"
 ```
-![vagrantPasswordSuccessFail](https://github.com/user-attachments/assets/744f4612-b812-4589-9b59-c7521f28d0dd)
+![vagrantPasswordSuccessFail](Phase2/5.png)
 
 
