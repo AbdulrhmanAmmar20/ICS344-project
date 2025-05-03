@@ -32,7 +32,7 @@ vagrant up
 
 After the VM is up and running, confirm the IP address by logging into the Metasploitable3 VM and checking the network interface:
 
-![1](https://github.com/user-attachments/assets/7d3b312e-675f-46ee-b638-5e2cc82807bc)
+![1](./phase1/1.png)
 
 
 ## Setting Up the Attacker Environment
@@ -44,7 +44,7 @@ The attacker environment was set up using **Kali Linux**. Kali Linux provides nu
 
 The first step was to scan the target machine using Nmap to identify open services and ports:
 
-![2](https://github.com/user-attachments/assets/fe6d17ec-0552-49db-8ded-ce9cbd154ec2)
+![2](./phase1/2.png)
 
 #### This revealed multiple open ports like FTP (21), SSH (22), and HTTP (80), which are known to be vulnerable to various exploits.
 
@@ -60,11 +60,11 @@ Usernames Wordlist: A file containing common usernames that could be used for th
 
 Passwords Wordlist: A file containing common passwords that could be used in the attack.
 
-![4](https://github.com/user-attachments/assets/ada831c9-567f-4044-b98e-f2259b70e1c3)
+![4](./phase1/4.png)
 
 
 
-![3](https://github.com/user-attachments/assets/856ea9db-4ad0-4d5f-b586-6acf0103ec8f)
+![3](./phase1/3.png)
 
 ##### This is the worslists repo https://github.com/danielmiessler/SecLists.git
 
@@ -72,14 +72,14 @@ Passwords Wordlist: A file containing common passwords that could be used in the
 
 With the wordlists prepared, Hydra was used to attempt an SSH brute-force attack using these lists. 
 
-![5](https://github.com/user-attachments/assets/b083698f-be82-41ed-a87f-3daf7712aef8)
+![5](./phase1/5.png)
 
 
 The attack was executed with the following command:
 
 hydra -L ssh_usernames.txt -P ssh_passwords.txt ssh://172.28.128.3
 
-![6](https://github.com/user-attachments/assets/0083a905-b17b-4036-b0bc-b530c2bd50a1)
+![6](./phase1/6.png)
 
 
 #### Resutult of the Attack
@@ -87,25 +87,25 @@ hydra -L ssh_usernames.txt -P ssh_passwords.txt ssh://172.28.128.3
 Once valid credentials were obtained, I was able to access the victim machine via SSH using the credentials 
 vagrant:vagrrant. 
 
-![7](https://github.com/user-attachments/assets/ecf6cd2e-2e5e-4222-abad-f4514ef8025f)
+![7](./phase1/7.png)
 
 This is a flag written by the victim's machine (flag.txt:
 
-![8](https://github.com/user-attachments/assets/c9bc14e4-c6a2-40ff-b5b2-62d3c0c2307b)
+![8](./phase1/8.png)
 
 This is the flag read by the attacker that was written by the victim:
 
-![9](https://github.com/user-attachments/assets/c64aabbc-45de-4b18-b2c3-cd1ef94e7847)
+![9](./phase1/9.png)
 
 
 This flag was written by the Attacker's machine (hacked.txt):
 
-![10](https://github.com/user-attachments/assets/32b1e658-2dd9-4881-836b-e7a3e6014ce9)
+![10](./phase1/10.png)
 
 The flag was read by the victim (hacked.txt):
 
 
-![11](https://github.com/user-attachments/assets/47a4b284-00e8-4c92-b259-7f3512ed3adb)
+![11](./phase1/11.png)
 
 ## Writing a Custom Script for SSH Brute Force
 
@@ -282,7 +282,7 @@ def main():
 ###### python ssh-bruteforce.py 172.28.128.3
 
 
-![12](https://github.com/user-attachments/assets/fd538f27-5b3b-44bc-9fdd-2d1284cf810d)
+![12](./phase1/12.png)
 
 
 The script successfully found the valid credentials (username: vagrant, password: vagrant) after trying multiple combinations 
