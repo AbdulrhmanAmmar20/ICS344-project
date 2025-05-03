@@ -202,28 +202,28 @@ ls -la var/lib/cowrie/tty/
 
 #### Band and Unban
 
-![banUnban](https://github.com/user-attachments/assets/cef790cd-a2c4-4696-9dd0-c1aa677b3deb)
+![banUnban](Phase3/1.png)
 
 #### Blocking an IP
 
-![blockingIP](https://github.com/user-attachments/assets/cb1935e6-10de-4060-850e-507cec40e746)
+![blockingIP](Phase3/2.png)
 
 #### Proof of ban
 
-![proofOfBan](https://github.com/user-attachments/assets/9a83169f-5609-48f0-8083-18312a4820b1)
+![proofOfBan](Phase3/3.png)
 
 
 #### Fail2ban Logs on splunk
 
-![fail2banSplunkLogs](https://github.com/user-attachments/assets/d376beed-3f2d-4db5-ae6b-4222f7936f70)
+![fail2banSplunkLogs](Phase3/4.png)
 
 #### Ban Unban on splunk
 
-![banUnbanSplunk](https://github.com/user-attachments/assets/94236723-c222-491a-a14a-68ffd65ca20b)
+![banUnbanSplunk](Phase3/5.png)
 
 #### List of banned IPs on Splunk using a query
 
-![Dashboard](https://github.com/user-attachments/assets/0c5fd011-b525-43c3-86c7-b212d2b77c26)
+![Dashboard](Phase3/6.png)
 
 
 
